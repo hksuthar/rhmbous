@@ -1,0 +1,134 @@
+[
+    {
+        "Address": "General Status",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "",
+        "Variables": ""
+    },
+    {
+        "Address": "256",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%d Hz')",
+        "Rate": "2000",
+        "Scaling": "65.535 Hz",
+        "Security": "",
+        "Signal": "Grid Frequency",
+        "Variables": "act_load_frequency"
+    },
+    {
+        "Address": "257",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f C')",
+        "Rate": "2000",
+        "Scaling": "109.22/c",
+        "Security": "",
+        "Signal": "Ambient Temperature",
+        "Variables": "epc_amb_temp"
+    },
+    {
+        "Address": "258",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f C')",
+        "Rate": "2000",
+        "Scaling": "109.22/c",
+        "Security": "",
+        "Signal": "Heat Sink Temperature",
+        "Variables": "m1_coldplate_temp"
+    },
+    {
+        "Address": "259",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f V')",
+        "Rate": "2000",
+        "Scaling": "50.024/V",
+        "Security": "",
+        "Signal": "LVPS Voltage",
+        "Variables": "ai_vbat_filt"
+    },
+    {
+        "Address": "260",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "L('|','=','Open=0|Closed=1',0)",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "Channel 1 AC Contactor Status",
+        "Variables": "ac_contactor[0]"
+    },
+    {
+        "Address": "261",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "L('|','=','Open=0|Closed=1',0)",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "Channel 2 AC Contactor Status",
+        "Variables": "ac_contactor[1]"
+    },
+    {
+        "Address": "262",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "L('|','=','Open=0|Closed=1',0)",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "Channel 1 DC Contactor Status",
+        "Variables": "dc_contactor[0]"
+    },
+    {
+        "Address": "263",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "L('|','=','Open=0|Closed=1',0)",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "Channel 2 DC Contactor Status",
+        "Variables": "dc_contactor[1]"
+    },
+    {
+        "Address": "General Status",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "",
+        "Variables": ""
+    },
+    {
+        "Address": "264",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "L('|','=','Off=0|On=1',0)",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "Channel 1 Cooling Fan status",
+        "Variables": "cooling_fan[0]"
+    },
+    {
+        "Address": "265",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "L('|','=','Off=0|On=1',0)",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "Channel 2 Cooling Fan status",
+        "Variables": "cooling_fan[1]"
+    }
+]

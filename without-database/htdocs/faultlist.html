@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app="fault">
+<head>
+    <title>Faults History</title>
+    <link rel="stylesheet" type="text/css" href="css/ng-keypad.css">
+    <link rel="stylesheet" type="text/css" href="css/ng-modal.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/ng-keypad-login.css">
+    <link rel="stylesheet" type="text/css" href="css/ng-modal-login.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="js/angular.js"></script>
+    <script src="js/angular-cookies.js"></script>
+    <script src="js/fault.js"></script>
+    <script>
+        tableTitle = 'Faults History';
+        jsonUrl1 = 'json/CIU_Faults_and_Warnings.json';
+        jsonUrl2 = 'json/MIU_Faults_and_Warnings.json';
+        statusScreen = false;
+    </script>
+    <script src="js/sprintf.js"></script>
+	<script src="js/elements.js"></script>
+	<script src="js/ng-modal.js"></script>
+	<script src="js/angular-idle.min.js"></script>
+</head>
+
+<body ng-controller="tableCtrl">
+
+    <div class="table-slideshow-container" >
+    	<!-- Table drawing html. -->
+    	<div class="site-wrap">
+    	    <div>
+                <a class="prev-new"  onclick="window.location.href='error&warning.html'">
+                  <img src="images/left-arrow.svg">
+                </a>
+            </div>
+            <div ng-if="data_Loading == false">
+			    <img id="spinner" ng-src="images/loading.gif" />
+			</div>
+            <div class="codrops-header" ng-if="data_Loading != false">
+                <h1 id="fixedtop" style="padding-top: .6em; padding-bottom: 0px; margin: 1px; width: 100%; z-index: 10;">
+                    {{tableTitle}}</h1>
+            </div>
+
+            <div class="inner-screen" ng-if="data_Loading != false">
+                <table style="position: relative; top: 1em" id="eventTable" class="table table-striped" style="z-index: 10;">
+                    <tbody>
+                        <tr style="font-size: 20px;" class="fullscreen" >
+                            <td style="color: red; font-weight: bold; font-size: 20px;">Faults </td>
+                            <td style="color: red; font-weight: bold; font-size: 20px;">Faults Description</td>
+                            <td style="color: red; font-weight: bold; font-size: 20px;">Faults Date & Time</td>	
+                        </tr>
+                        
+                        <div ng-if="nodata == false">
+                            <p style="position: absolute; top: 3em; left: 14em; color: rgb(255, 255, 255); font-size: 18px;">No Data Found</p>
+                        </div>
+                        <tr ng-repeat="row in rowDef" ng-if="data_Loading != false && row.name != '' && row.dataFmtd != '' && row.dataFmtd != '' ">
+                            <td style="font-size: 20px;" ng-if="row.name != '' ">{{row.name}}</td>
+                            <td style="font-size: 20px;" ng-if="row.dataFmtd != '' ">{{row.dataFmtd}}</td>
+                            <td style="font-size: 20px;" ng-if="row.high_1 != '' || row.high_2 != '' || row.high_3 != '' || row.low_1 != '' || row.low_2 != '' || row.low_3 != '' ">{{row.low_2}}/{{row.high_3}}/{{row.low_3}} | {{row.high_1}}:{{row.low_1}}:{{row.high_2}}</td>
+                            <td style="font-size: 20px;" ng-if="row.high_1 == '' || row.high_2 == '' || row.high_3 == '' || row.low_1 == '' || row.low_2 == '' || row.low_3 == '' "></td>
+                        </tr>
+                    </tbody>
+                    
+                </table>
+            </div>
+    	</div>
+    </div>
+    
+    
+    
+</body>
+</html>

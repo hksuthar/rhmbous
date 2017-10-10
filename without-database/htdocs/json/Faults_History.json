@@ -1,0 +1,123 @@
+[
+    {
+        "Address": "292",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','Crit Mod Comm Err=0|Key Faulted=1|Purge Fail Shtdwn=2|Config Invalid Shtdwn=3|Controller Mode Incorrect=4|Enclosure Overtemp=5|CCU Faulted=6|Non CCU BB Shuts=7|EPO Shutdown=8|Fuel Valve Retry Failure=9|Excesv P2 P3 Faults Shtdnw=10|K2 Relay Cntrl Failed=11|Cogen Too Hot=12|LVPS Low Fault=13|Low VBATT Fault=14|Amb Temp Senr OOR Shut=15')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU Fault",
+        "Variables": "ss_status[0]"
+    },
+    {
+        "Address": "293",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','Can Amb Tep OOR=0')",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU Fault",
+        "Variables": "ss_status[1]"
+    },
+    {
+        "Address": "294",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','Invalid Input=2')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU Warning",
+        "Variables": "ss_status[2]"
+    },
+    {
+        "Address": "295",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "L('|','=','Maint Mode=0|Master Unit=1|Slave Unit=2|Unit Start Stop=5|Cmnd Sync Zero=14|Maint Mode Aux Cmd=15')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU State",
+        "Variables": "ss_status[3]"
+    },
+    {
+        "Address": "296",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','Phase Out U-Voltage=0|Phase Out O-Voltage=1|CPlate OverTemp SD=2|DC Link Overvolt SD=3|DcLink O-Voltage SD=4|DC Bus Hw Fault SD=5|M2 Unit Ph C SD=6|EPC-M Softwr OvFlow=7|Unit Response T.O.=8|Current Limit Time=9|CritModCommunctnErr=10|Offset Ir SD=11|Offset Is SD=12|K1 Failure to Close=13|K1 Welded=14|EPO Shutdown=15')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU State",
+        "Variables": "epcl_ss_status[0][0]"
+    },
+    {
+        "Address": "297",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','CP TempSensor Fault=0|Unexpected DC Bus=1|M2 Unit Ph A SD=2|DC Bus O-Current SD=3|Thermal O-Load SD=4|HSTempSenseDislocSD=5|No CoolantSuspectSD=6|GFI Fault SD=7|DCPolarityReverseSD=8|DCBusReversePowerSD=9|M2 Unit Ph B SD=10|P2Gnd Fault SD=11|N2Gnd Fault SD=12|Precharge Fail SD=13|DC Contact Weld SD=14|DC Contact Open SD=15')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU State",
+        "Variables": "epcl_ss_status[0][1]"
+    },
+    {
+        "Address": "298",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','DC Aux Cnt Weld Warn=0|Phase Out Uv Warn=1|DC Aux Cnt Open Warn=2|Pwr Limit Warn=3|Grid Over Volt Warn=4|Grid Under Volt Warn=5|Grid Over Freq Warn=6|Grid Under Freq Warn=7|Over Crnt Short Warn=8|Over Crnt Warn=9|Phase Out Ov Warn=10|Inv Over Freq Warn=11|Inv Under Freq Warn=12|Too Cold Warn=13|Cp Overtemp Warn=14|Eeprom Bad Warn=15')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU State",
+        "Variables": "epcl_ss_status[0][2]"
+    },
+    {
+        "Address": "299",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','Maint Mode=0|Inverter Status=1|In Grid Mode=2|K1 Status=3|Reset Request=4|Ena Fast Vdc Comp Cntrl=5|Timer Active=6|Connecting=7|Const I Mode=8|Const R Mode=9|Const P Mode=10|Const V '0Mode=11|Auxpwr Lf Fan=12|Auxpwr Cooling Pump=13|Auxpwr Cooling Fan=14|Rcvd All Ctrl Vals=15')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU State",
+        "Variables": "epcl_ss_status[0][3]"
+    },
+    {
+        "Address": "300",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','Flash Chksum Shtdwn=0|Wrong Init Volt At Start Shtdwn=1|Single Phase Open Shtdwn=2|Syn Err Timeout Shtdwn=3|Grid Phase Seq Rev Shtdwn=4|Inv Under Freq Shtdwn=5|Inv Over Freq Shtdwn=6|Lca Gd Hw Flt Shtdwn=7|Sw Over Crnt Shtdwn=8|Coolant Flow Pwrup Shtdwn=9|Coolant Flow Loss Shtdwn=10|Programmed Confg Invalid=11|Slave Flt Shtdwn=12|Pwr Supply Range Shtdwn=13|Ext Ad A Shtdwn=14|Ext Ad B Shtdwn=15')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU State",
+        "Variables": "epcl_additional_status[0][0]"
+    },
+    {
+        "Address": "301",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','LCA Ovr Curr Shtdwn=0|LCA Dt Flt Shtdwn=1|LCA Dc Link Ov Shtdwn=2|LCA Ovr Curr Short Shtdwn=3|LCA Cneg Flt Shtdwn=4|LCA Cpos Flt Shtdwn=5|LCA Bneg Flt Shtdwn=6|LCA Bpos Flt Shtdwn=7|LCA Aneg Flt Shtdwn=8|LCA Apos Flt Shtdwn=9|LCA Ovrcur Early Shtdwn=10|LCA Gnd Flt Shtdwn=11|LCA Cp Ovr Temp Shtdwn=12|LCA Cp Und Temp Shtdwn=13|M2 Unit Failure Shtdwn=14|DC Bus Voltage Oor Shtdwn=15')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU State",
+        "Variables": "epcl_additional_status[0][1]"
+    },
+    {
+        "Address": "302",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','DC Link Uv Shtdwn=1|SCB Fail To Close Shtdwn=13|SCB Contactor Welded Shtdwn=14')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU State",
+        "Variables": "epcl_additional_status[0][2]"
+    }
+]

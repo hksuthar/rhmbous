@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>DC Settings 2</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css"> 
+    <script>setTimeout(function(){window.location.href='blank.html'},250000);</script>
+</head>
+
+<body>
+<div class="table-slideshow-container">
+    <a class="prev-new"  href='settings.html'>
+        <img src="images/left-arrow.png">
+    </a>
+    <div class="codrops-header">
+        <h1 id="fixedtop" style="padding-top: .6em; padding-bottom: 0px; margin: 1px; width: 100%; z-index: 10;">
+            DC Settings 2</h1>
+    </div>
+    <div class="inner-screen">
+            <table id="tableData" style="position: relative; top: 1em" id="eventTable" class="table table-striped">
+                <tbody>
+                    <tr style="font-size: 20px;" class="fullscreen ng-scope">
+                        <td style="color: red; font-weight: bold; font-size: 20px;" class="ng-binding"> DC Settings 1</td>
+                    </tr>
+                    <tr style="font-size: 20px;" class="fullscreen ng-scope">
+                        <td class="ng-binding"> Op Mode</td> 
+                        <td class="ng-scope"> Off </td>
+                        <td><a class="change-btn btn blue-stripe" onclick="window.location.href='#popup2'"><p>Change</p></a></td>
+                    </tr>
+                    <tr style="font-size: 20px;" class="fullscreen ng-scope">
+                        <td class="ng-binding"> Op Mode Setpoints</td> 
+                        <td class="ng-binding ng-scope"> OMS</td>
+                        <td></td>
+                    </tr>
+                    <tr style="font-size: 20px;" class="fullscreen ng-scope">
+                        <td class="ng-binding"> Battery Voltage Max</td> 
+                        <td class="ng-binding ng-scope"> 245.2V</td> 
+                        <td><a class="change-btn btn blue-stripe" onclick="window.location.href='#popup2'"><p>Change</p></a></td>
+                    </tr>
+                    <tr style="font-size: 20px;" class="fullscreen ng-scope">
+                        <td class="ng-binding"> Battery Voltage Min</td> 
+                        <td class="ng-binding ng-scope"> 235.5V</td> 
+                        <td><a class="login-btn btn blue-stripe ng-scope" onclick="window.location.href='#popup1'"><p>Login</p></a></td>
+                    </tr>
+                    <tr style="font-size: 20px;" class="fullscreen ng-scope">
+                        <td class="ng-binding"> Battery Max Charge Current</td> 
+                        <td class="ng-binding ng-scope"> Bat</td> 
+                        <td><a class="change-btn btn blue-stripe" onclick="window.location.href='#popup2'"><p>Change</p></a></td>
+                    </tr>
+                    <tr style="font-size: 20px;" class="fullscreen ng-scope">
+                        <td class="ng-binding"> Battery Max Discharge Current</td> 
+                        <td class="ng-binding ng-scope"> Fat</td> 
+                        <td><a class="login-btn btn blue-stripe ng-scope" onclick="window.location.href='#popup1'"><p>Login</p></a></td>
+                    </tr>
+                    <tr style="font-size: 20px;" class="fullscreen ng-scope">
+                        <td class="ng-binding"> Battery Max Charge Power</td> 
+                        <td class="ng-binding ng-scope"> Fat</td>
+                        <td><a class="change-btn btn blue-stripe" onclick="window.location.href='#popup2'"><p>Change</p></a></td>
+                    </tr>
+                    <tr style="font-size: 20px;" class="fullscreen ng-scope">
+                        <td class="ng-binding"> Battery Max Discharge Power Type 0</td> 
+                        <td class="ng-binding ng-scope"> Fat</td>
+                        <td><a class="change-btn btn blue-stripe" onclick="window.location.href='#popup2'"><p>Change</p></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <dir-pagination-controls class="ng-isolate-scope" direction-links="true">
+                <ul class="pagination ng-scope">
+                    <li class="ng-scope disabled">
+                        <a>
+                            <img src="./images/up_arrow.png">
+                        </a>
+                    </li>
+                    <li class="ng-scope active">
+                        <a class="ng-binding">1</a>
+                    </li>
+                    <li class="ng-scope">
+                        <a class="ng-binding">2</a>
+                    </li>
+                    <li class="ng-scope">
+                        <a class="ng-binding">3</a>
+                    </li>
+                    <li class="ng-scope" >
+                        <a class="ng-binding">4</a>
+                    </li>
+                    <li class="ng-scope">
+                        <a>
+                            <img src="./images/down_arrow.png">
+                        </a>
+                    </li>
+                </ul>
+            </dir-pagination-controls>
+        </div>
+    </div>
+    <div id="popup1" class="overlay">
+        <div style="width: 600px; height: 450px;" class="ng-modal-dialog" ng-style="dialogStyle">
+            <div class="ng-modal-dialog-content" ng-transclude="">
+                <div class="ng-scope popup-scop">
+                    <img src="images/popup.jpg"/>
+                    <a class="cancel" onclick="window.location.href='#'"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="popup2" class="overlay">
+        <div style="width: 600px; height: 450px;" class="ng-modal-dialog">
+            <div class="ng-modal-dialog-content" ng-transclude="">
+                <div class="ng-scope popup-scop">
+                    <img src="images/popup1.jpg"/>
+                    <a class="cancel-scop" onclick="window.location.href='#'"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

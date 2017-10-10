@@ -1,0 +1,167 @@
+[
+    {
+        "Address": "DC Status 1",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "",
+        "Variables": ""
+    },
+    {
+        "Address": "266",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "L('|','=','POWER_ON_CONTROLLERS=0|DISCONNECTED=1|CONNECTING=2|CONST_I_MODE=3|CONST_R_MODE=4|CONST_P_MODE=5|CONST_V_MODE=6|POWER_OFF_CONTROLLERS=7|FAULT_SHUTDOWN=8|SERVICE_REQUIRED=9|MAINTENANCE=10|MAINTENANCE_POWERDOWN=11|CONNECTING_MODE=12|NO_SYNC_MODE=13|STANDALONE_MODE=14|SALONE_DELIVERY_MODE=15)",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "Current Inverter Status",
+        "Variables": "EPC_State_Display[0]"
+    },
+    {
+        "Address": "267",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f V')",
+        "Rate": "2000",
+        "Scaling": "32.767/V",
+        "Security": "",
+        "Signal": "Battery/PV (Remote voltage)",
+        "Variables": "dc_input_volt[0]"
+    },
+    {
+        "Address": "268",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "DC_Lnk_Set()",
+        "Rate": "2000",
+        "Scaling": "1",
+        "Security": "",
+        "Signal": "DC Link Setpoints",
+        "Variables": "max_power_command[0]"
+    },
+    {
+        "Address": "269",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f V')",
+        "Rate": "2000",
+        "Scaling": "32.767/V",
+        "Security": "",
+        "Signal": "DC Bus Voltage",
+        "Variables": "epcl_dc_link_volt[0]"
+    },
+    {
+        "Address": "270",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f V')",
+        "Rate": "2000",
+        "Scaling": "218.44/kW",
+        "Security": "",
+        "Signal": "DC Bus Power",
+        "Variables": "epcl_dc_link_pwr[0]"
+    },
+    {
+        "Address": "271",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f V')",
+        "Rate": "2000",
+        "Scaling": "32.767/A",
+        "Security": "",
+        "Signal": "DC Bus Current",
+        "Variables": "epc1_dc_link_crnt[0]"
+    },
+    {
+        "Address": "DC Status 2",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "",
+        "Variables": ""
+    },
+    {
+        "Address": "272",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "L('|','=','POWER_ON_CONTROLLERS=0|DISCONNECTED=1|CONNECTING=2|CONST_I_MODE=3|CONST_R_MODE=4|CONST_P_MODE=5|CONST_V_MODE=6|POWER_OFF_CONTROLLERS=7|FAULT_SHUTDOWN=8|SERVICE_REQUIRED=9|MAINTENANCE=10|MAINTENANCE_POWERDOWN=11|CONNECTING_MODE=12|NO_SYNC_MODE=13|STANDALONE_MODE=14|SALONE_DELIVERY_MODE=15)",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "Current inverter status",
+        "Variables": "EPC_State_Display[1]"
+    },
+    {
+        "Address": "DC Status 2",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "",
+        "Variables": ""
+    },
+    {
+        "Address": "273",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f V')",
+        "Rate": "2000",
+        "Scaling": "32.767/V",
+        "Security": "",
+        "Signal": "Battery/PV (Remote voltage)",
+        "Variables": "dc_input_volt[1]"
+    },
+    {
+        "Address": "274",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "DC_Lnk_Set()",
+        "Rate": "2000",
+        "Scaling": "1",
+        "Security": "",
+        "Signal": "DC Link Setpoints",
+        "Variables": "max_power_command[1]"
+    },
+    {
+        "Address": "275",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f V')",
+        "Rate": "2000",
+        "Scaling": "32.767/V",
+        "Security": "",
+        "Signal": "DC Bus Voltage",
+        "Variables": "epcl_dc_link_volt[1]"
+    },
+    {
+        "Address": "276",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f V')",
+        "Rate": "2000",
+        "Scaling": "218.44/kW",
+        "Security": "",
+        "Signal": "DC Bus Power",
+        "Variables": "epcl_dc_link_pwr[1]"
+    },
+    {
+        "Address": "277",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "R(_,_,_,'%.1f V')",
+        "Rate": "2000",
+        "Scaling": "32.767/A",
+        "Security": "",
+        "Signal": "DC Bus Current",
+        "Variables": "epc1_dc_link_crnt[1]"
+    }
+]

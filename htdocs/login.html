@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="css/ng-keypad-login.css">
+    <link rel="stylesheet" type="text/css" href="css/ng-modal-login.css" media="all"/>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/modernizr-custom.js"></script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular-cookies.js"></script>
+</head>
+<body ng-controller="LoginController">
+	<div class="slideshow-container">
+        <div class="login-screen">
+		<h5>Enter Change Access Password</h5>
+            <div ng-show="error" class="alert alert-danger">{{error}}</div>
+            <form name="form"  ng-submit="login(); start()" role="form">
+                <div class="input-field">
+                    <img src="images/passwordicon.png">
+                    <input type="text" class="keypad-display" name="password" id="password" ng-model="password" placeholder="Enter your password" disabled/>
+                    <a class="clear" data-ng-click="clearSearch()"><img src="images/cross.png"></a>
+                    <div ng-controller='kpdController as vm'>
+                        <div class='kpd'>
+                            <ng-keypad on-key-pressed='vm.onKeyPressed'>
+                            <ng-key ng-repeat='key in vm.keys' ng-key-data='key'>{{key}}</ng-key>
+                            <ng-key ng-key-data='""' style="border: none;"></ng-key>
+                            <ng-key ng-key-data='"0"'>0</ng-key>
+                            <ng-key ng-key-data='""' style="border: none;"></ng-key>
+                            <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">Login</button>
+                            <ng-key ng-key-data='"Cancel"' class="cancel">Cancel</ng-key>
+                            </ng-keypad>
+                        </div>
+                </div>
+                <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+                </div>
+            </form>
+        </div>
+        <div class="brand-logo">
+          <img src="./images/rhombus_logo.png">
+      </div>
+  </div>
+
+    <script src="js/sprintf.js"></script>
+    <script src="js/elements.js"></script>
+    <script src="js/ng-keypad.js"></script>
+    <script src="js/ng-modal.js"></script>
+    <script src="js/dirPagination.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.2.0.min.js"></script>
+    <script src="js/angular-idle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

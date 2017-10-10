@@ -1,0 +1,7 @@
+NAME    = mbs
+CC      = gcc
+CFLAGS  = -g -Wall -DDEBUG -std=gnu99
+INCDIR  = -I/usr/local/include/modbus
+LDFLAGS = -Wl,/usr/local/lib/libmodbus.so -Wl,-rpath -Wl,/usr/local/lib/
+DEFS    =
+OBJECTS = main.o

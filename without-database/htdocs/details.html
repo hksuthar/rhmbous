@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="slider">
+    <head>
+        
+	<title>Status</title>
+        <link href="css/style.css" rel="stylesheet" type="text/css">
+        <script src="js/angular.js"></script>
+    </head>
+
+    <body ng-controller="SliderController">
+
+        <div class="slideshow-container">
+        	<div class="codrops-header">
+            <h1 id="fixedtop" style="padding-top: .6em; padding-bottom: .3em; margin: 0px; width: 100%; z-index: 10;">
+             Status </h1>
+    </div>
+            <div class="settings-sec">
+                <button onclick="window.location.href='GenStatus.html'"> <div class="set-col-4">
+                    <img src="images/tool.png">
+                    <p>General Status</p>
+                    </div></button>
+                <button onclick="window.location.href='ACStatus.html'"> <div class="set-col-4">
+                    <img src="images/ac.png">
+                    <p>AC Status</p>
+                    </div></button>
+                <button onclick="window.location.href='DCStatus.html'"> <div class="set-col-4">
+                    <img src="images/dc.png">
+                    <p>DC Status</p>
+                     </div></button>
+            </div>
+
+	<a class="prev" onclick="window.location.href='ciu.html'"><img border="0" src="images/left-arrow.svg"></a>
+            <div class="brand-logo">
+                <img src="images/rhombus_logo.png">
+            </div>
+        </div>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular-cookies.js"></script>
+    <script src="js/sprintf.js"></script>
+    <script src="js/elements.js"></script>
+    <script src="js/ng-keypad.js"></script>
+    <script src="js/ng-modal.js"></script>
+    <script src="js/dirPagination.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.2.0.min.js"></script>
+    <script src="js/angular-idle.min.js"></script>
+    <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
+
+

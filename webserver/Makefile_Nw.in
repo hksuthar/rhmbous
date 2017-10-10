@@ -1,0 +1,7 @@
+NAME    = mbs
+CC      = gcc
+CFLAGS  = -g -Wall -DDEBUG -std=gnu99
+INCDIR  = -I/usr/include/modbus -I/home/debian/webserver
+LDFLAGS =
+DEFS    =
+OBJECTS = main.o libmodbus.so libhiredis.a

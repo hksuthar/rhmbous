@@ -1,0 +1,125 @@
+<link rel="stylesheet" type="text/css" href="css/ng-keypad-login.css">
+<link rel="stylesheet" type="text/css" href="css/ng-modal-login.css" media="all"/>
+<!-- All of the HTML required to draw a table. -->
+<!--<script src="js/sprintf.js"></script>-->
+<div ng-if="tableTitle == 'AC Settings' || tableTitle == 'DC Settings' || tableTitle == 'General Settings'">
+ <a class="prev"  onclick="window.location.href='settings.html'">
+ <img border="0" src="images/left-arrow.svg">
+</a></div>
+<div ng-if="tableTitle == 'AC Status' || tableTitle == 'DC Status' || tableTitle == 'General Status'">
+ <a class="prev"  onclick="window.location.href='details.html'">
+  <img border="0" src="images/left-arrow.svg">
+</a></div>
+<div ng-if="tableTitle == 'CIU Error And Warnings' || tableTitle == 'MIU Error And Warnings'">
+ <a class="prev"  onclick="window.location.href='error&warning.html'">
+  <img border="0" src="images/left-arrow.svg">
+</a></div>
+
+<div class="codrops-header">
+    <h1 id="fixedtop" style="padding-top: .6em; padding-bottom: 0px; margin: 1px; width: 100%; z-index: 10;">
+        {{tableTitle}}</h1>
+</div>
+    <div>
+        <div class="inner-screen">
+            <table style="position: relative; top: 1em" id="eventTable" class="table table-striped" style="z-index: 10;">
+                <tbody>
+                    
+                    <tr dir-paginate="row in rowDef | itemsPerPage: pageSize" current-page="currentPage" style="font-size: 20px;" class="fullscreen" ng-if="data_Loading != false">
+                        <td ng-style="row.titleStyle"> {{row.title}}</td> 
+            			<td ng-if ="row.Address == 1024 && row.dataRaw == 0"> No Access </td>
+                        <td ng-if ="row.Address == 1024 && row.dataRaw == 124"> Read Only </td>
+            			<td ng-if ="row.Address == 1024 && row.dataRaw == 125"> Low </td>
+            			<td ng-if ="row.Address == 1024 && row.dataRaw == 126"> Medium </td>
+            			<td ng-if ="row.Address == 1024 && row.dataRaw == 127"> High </td>
+            			<td ng-if ="row.Address != 1024"> {{row.dataFmtd}}</td> 
+            			<td>
+            				<div ng-if="row.Address == 1024">
+            				</div>
+            				<div ng-if="row.Address != 1024">
+                                <div ng-if="elementValues1[0].data == 126">
+                					<button class="change-btn btn blue-stripe" ng-click="changeElement(($index) + (currentPage - 1) * pageSize)" ng-if="row.Security == 125 || row.Security == 126" ng-hide="row.changeHidden;"><p>Change</p></button>
+                					<button ng-if="row.Security == 127" class="login-btn btn blue-stripe" ng-click="show_login()" ng-hide="row.changeHidden;"><p>Login</p></button>
+                				</div>
+                				<div ng-if="elementValues1[0].data != 126">
+                				    <button class="change-btn btn blue-stripe" ng-click="changeElement(($index) + (currentPage - 1) * pageSize)" ng-if="(elementValues1[0].data != 124) && (row.Security == elementValues1[0].data || elementValues1[0].data == 127)" ng-hide="row.changeHidden;"><p>Change</p></button>   	
+            				        <button ng-if="elementValues1[0].data == 124 || (row.Security != elementValues1[0].data && elementValues1[0].data != 127)" class="login-btn btn blue-stripe" ng-click="show_login()" ng-hide="row.changeHidden;"><p>Login</p></button>
+            				    </div>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <dir-pagination-controls direction-links="true" ng-if="data_Loading != false">
+            </dir-pagination-controls>
+        </div>
+        <modal-dialog show='show_login.show' width='600px' height='450px' on-close='closeModal()' ng-if="data_Loading != false">
+            <div ng-controller="LoginController">
+                <div class="login-screen">
+                    <h5>Enter Change Access Password</h5>
+                    <div ng-show="error" class="alert alert-danger">{{error}}</div>
+                    <form name="form"  ng-submit="login(); start()" role="form">
+                        <div class="input-field">
+                            <img src="images/passwordicon.png">
+                            <input type="text" class="keypad-display" name="password" id="password" ng-model="password" placeholder="Enter your password" disabled/>
+                            <a class="clear" data-ng-click="clearSearch()"><img src="images/cross.png"></a>
+                            <div ng-controller='kpdController as vm'>
+                                <div class='kpd'>
+                                    <ng-keypad on-key-pressed='vm.onKeyPressed'>
+                                    <ng-key ng-repeat='key in vm.keys' ng-key-data='key'>{{key}}</ng-key>
+                                    <ng-key ng-key-data='""' style="border: none;"></ng-key>
+                                    <ng-key ng-key-data='"0"'>0</ng-key>
+                                    <ng-key ng-key-data='""' style="border: none;"></ng-key>
+                                    <button type="submit" ng-disabled="form.$invalid || dataLoading" class="btn btn-danger">Login</button>
+                                    <ng-key class="cancel" ng-key-data='"Cancel"'>Cancel</ng-key>
+                                    </ng-keypad>
+                                </div>
+                        </div>
+                        <span ng-show="form.password.$dirty && form.password.$error.required" class="help-block">Password is required</span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </modal-dialog>
+        <div ng-switch="modalData.rangeName">
+            <div ng-switch-when="R">
+                <modal-dialog show='modalData.show' width='600px' height='450px' on-close='closeModal()'>
+                	<div ng-controller='kpdController_m1 as vm'>
+                        <h class="keypad-title ">Setting: {{modalData.title}}</h>
+                        <br>
+                        <h class="keypad-title ">Current Value: {{modalData.dataFmtd}}</h>
+                        <br>
+                        <h class="keypad-title " ng-style="{'color': modalData.oor}"> Range: {{modalData.lowFmtd}} to {{modalData.highFmtd}}</h>
+                        <div class='kpd'>
+                            <input class="keypad-display" ng-model='modalData.newFmtd' disabled/>
+                            <ng-keypad on-key-pressed='vm.onKeyPressed'>
+                                <ng-key ng-repeat='key in vm.keys' ng-key-data='key'>{{key}}</ng-key>
+                                <!--<ng-key class='empty'></ng-key>-->
+                                <ng-key ng-key-data='"-"'>+/-</ng-key>
+                                <ng-key ng-key-data='"0"'>0</ng-key>
+                                <ng-key ng-key-data='"."'>.</ng-key>
+                                <ng-key ng-key-data='"Clear"'>Clear</ng-key>
+                                <ng-key ng-key-data='"Cancel"'>Cancel</ng-key>
+                                <ng-key ng-key-data='"Enter"'>Enter</ng-key>
+                            </ng-keypad>
+            	       </div>
+                </div>
+                </modal-dialog>
+            </div>
+            <div ng-switch-when="L">
+                <modal-dialog show='modalData.show' width='40%' on-close='closeModal()'>
+                <p>List</p>
+            </modal-dialog>
+            </div>
+            <div ng-switch-when="B">
+                <modal-dialog show='modalData.show' width='40%' on-close='closeModal()'>
+                <p>Binary List</p>
+            </modal-dialog>
+            </div>
+            <div ng-switch-default>
+                <modal-dialog show='modalData.show' width='40%' on-close='closeModal()'>
+                <p>Error - bad modal name</p>
+                </modal-dialog>
+            </div>
+        </div>
+
+</div>

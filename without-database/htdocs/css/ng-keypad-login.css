@@ -1,0 +1,134 @@
+.kpd ng-key {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: transparent;
+    width: 30.3%;
+    height: 50px;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    font-weight: initial;
+    line-height: initial;
+    margin: 5px;
+}
+
+.kpd ng-key a {
+    color: #fff;
+    /*height: 7vh*/
+}
+
+/*.kpd ng-key a:hover {
+    background: #f3f3f3;
+    color: gray;
+}
+*/
+.kpd ng-key.empty {
+    background: #ccc
+}
+
+.kpd ng-key.empty a:hover:not(.ng-hide) {
+    background: #f3f3f3
+}
+
+.kpd .keypad-display {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+ng-keypad {
+    padding: 0;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    color: #101010;
+    margin: auto
+}
+
+ng-keypad ng-key {
+    font-size: 7vmin;
+    float: left;
+    text-align: center;
+    height: 10vh;
+    padding-top: 0;
+    width: 33.33333%;
+    background: #fff;
+    /*
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    */
+    user-select: none
+}
+
+ng-keypad ng-key a {
+    cursor: pointer;
+    display: block;
+    line-height: 50px;
+    margin: 0 auto;
+    /*padding-top: 0.5vh;*/
+    border: none;
+     font-family: 'arial';
+    font-size: 24px;
+    /*
+    -webkit-font-smoothing: antialiased;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    */
+    user-select: none
+}
+
+ng-keypad ng-key a:hover{
+    opacity: 0.8;
+    background: #525e65;
+}
+
+.keypad-display {
+    /*direction: rtl;*/
+    font-size: 24px;
+    padding: 0 -5% 5px 5%;
+    border: 0;
+    outline: 0;
+    text-align: right;
+    border-radius: 0;
+    width: 97%;
+    margin-bottom: 8px;
+    margin-top: 10px;
+    padding-right: 28px;
+}
+
+.keypad-display:disabled {
+    background: 0 0
+}
+
+.keypad-title {
+    font-family: 'arial';
+    font-size: 18px;
+    /*padding: 0 -5% 5px 5%;*/
+    margin: 0 auto;
+    border: 0;
+    outline: 0;
+    border-radius: 0;
+    width: 97%;
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.clear img
+{
+width: 5.5% !important;
+float: right;
+position: absolute;
+margin: 9px 0px 0px -22px;
+}
+.kpd a img
+{
+    width: 4.5%;
+float: right;
+position: absolute;
+margin: 3px 0px 0px -22px;
+}
+.kpd  img
+{
+    position: absolute;
+top: 20px;
+}

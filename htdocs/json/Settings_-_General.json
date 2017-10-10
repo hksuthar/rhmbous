@@ -1,0 +1,233 @@
+[
+    {
+        "Address": "General Settings",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "",
+        "Variables": ""
+    },
+    {
+        "Address": "1024",
+        "Default": "0",
+        "EEPROM": "N",
+        "Range": "L('|','=','No Access=0|Low=125|Medium=126|High=127')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "Low",
+        "Signal": "Security code",
+        "Variables": "security_code"
+    },
+    {
+        "Address": "1025",
+        "Default": "0",
+        "EEPROM": "Y",
+        "Range": "R(0,10,1,'%d')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "Medium",
+        "Signal": "Modbus Address",
+        "Variables": "modbus_addr"
+    },
+    {
+        "Address": "1026",
+        "Default": "9600",
+        "EEPROM": "Y",
+        "Range": "L('|','=','1200=1200|2400=2400|4800=4800|9600=9600')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "Medium",
+        "Signal": "Baud rate",
+        "Variables": "modbus_baud"
+    },
+    {
+        "Address": "1027",
+        "Default": "1",
+        "EEPROM": "Y",
+        "Range": "L('|','=','ASCII=0|RTU=1')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "Medium",
+        "Signal": "RTU/ASCII",
+        "Variables": "modbus_rtu"
+    },
+    {
+        "Address": "1028",
+        "Default": "2",
+        "EEPROM": "Y",
+        "Range": "L('|','=','Even=0|Odd=1|None=2')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "Medium",
+        "Signal": "Parity",
+        "Variables": "modbus_parity"
+    },
+    {
+        "Address": "1029",
+        "Default": "0",
+        "EEPROM": "Y",
+        "Range": "CIU_Date()",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "Low",
+        "Signal": "Date",
+        "Variables": "mod_date"
+    },
+    {
+        "Address": "1030",
+        "Default": "0",
+        "EEPROM": "Y",
+        "Range": "CIU_Time()",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "Low",
+        "Signal": "Time",
+        "Variables": "mod_time"
+    },
+    {
+        "Address": "1031",
+        "Default": "1702",
+        "EEPROM": "Y",
+        "Range": "L('|','=','Parallel Single=1702|Parallel Master=1712|Parallel Slave= 1722')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "Connect Type 0",
+        "Variables": "connect_type[0]"
+    },
+    {
+        "Address": "General Settings",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "",
+        "Variables": ""
+    },
+    {
+        "Address": "1032",
+        "Default": "1702",
+        "EEPROM": "Y",
+        "Range": "L('|','=','Parallel Single=1702|Parallel Master=1712|Parallel Slave=1722')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "Connect Type 1",
+        "Variables": "connect_type[1]"
+    },
+    {
+        "Address": "1033",
+        "Default": "21",
+        "EEPROM": "Y",
+        "Range": "L('|','=','AC=21|DC=42')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "AC/DC Power Control 0",
+        "Variables": "K_dc_ac[0]"
+    },
+    {
+        "Address": "1034",
+        "Default": "21",
+        "EEPROM": "Y",
+        "Range": "L('|','=','AC=21|DC=42')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "AC/DC Power Control 1",
+        "Variables": "K_dc_ac[1]"
+    },
+    {
+        "Address": "1035",
+        "Default": "0",
+        "EEPROM": "Y",
+        "Range": "L('|','=','Enable=0|Disable=2')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "Auto Transition Mode 0",
+        "Variables": "K_Trans_Config[0]"
+    },
+    {
+        "Address": "1036",
+        "Default": "0",
+        "EEPROM": "Y",
+        "Range": "L('|','=','Enable=0|Disable=2')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "Auto Transition Mode 1",
+        "Variables": "K_Trans_Config[1]"
+    },
+    {
+        "Address": "1037",
+        "Default": "0",
+        "EEPROM": "Y",
+        "Range": "L('|','=','Grid=0|Standalone=1')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "Standalone / Grid Mode 0",
+        "Variables": "K_ITG_Opmode[0]"
+    },
+    {
+        "Address": "1038",
+        "Default": "0",
+        "EEPROM": "Y",
+        "Range": "L('|','=','Grid=0|Standalone=1')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "Standalone / Grid Mode 1",
+        "Variables": "K_ITG_Opmode[1]"
+    },
+    {
+        "Address": "1039",
+        "Default": "60",
+        "EEPROM": "Y",
+        "Range": "L('|','=','50Hz=50|60Hz=60')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "Frequency",
+        "Variables": "freq_50_60"
+    },
+    {
+        "Address": "General Settings",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "",
+        "Variables": ""
+    },
+    {
+        "Address": "1040",
+        "Default": "2",
+        "EEPROM": "Y",
+        "Range": "L('|','=','Enable=1|Disable=2')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "Ground Fault",
+        "Variables": "ground_fault"
+    },
+    {
+        "Address": "1041",
+        "Default": "0",
+        "EEPROM": "Y",
+        "Range": "L('|','=','Battery 1 + Battery 2=0|PV1 + Battery2=1|Battery1 + PV2=2|PV1 + PV2=3')",
+        "Rate": "0",
+        "Scaling": "",
+        "Security": "High",
+        "Signal": "System Configuration",
+        "Variables": "sys_config"
+    }
+]

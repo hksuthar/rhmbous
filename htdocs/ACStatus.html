@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js" ng-app="app">
+<head>
+    
+    <title>AC Status</title>
+    <link rel="stylesheet" type="text/css" href="css/ng-keypad.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/ng-modal.css" media="all"/>
+    <script src="js/fusioncharts.js"></script>
+    <script type="js/fusioncharts.charts.js"></script>
+    <script src="js/fusioncharts.theme.fint.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+    <script src="js/angular.js"></script>
+    <script src="js/angular-route.js"></script>
+    <script src="js/angular-cookies.js"></script>
+    <!-- Include the table operation javascript. -->
+    <script>
+        tableTitle = 'AC Status';
+        jsonUrl = 'json/Status_-_AC.json';
+        statusScreen = true;
+    </script>
+    <script src="js/sprintf.js"></script>
+    <script src="js/elements.js"></script>
+    <script src="js/ng-keypad.js"></script>
+    <script src="js/ng-modal.js"></script>
+    <script src="js/dirPagination.js"></script>
+    <script src="js/table.js"></script>
+    <script src="js/ui-bootstrap-tpls-2.2.0.min.js"></script>
+    <script src="js/angular-idle.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body>
+
+<div class="table-slideshow-container">
+	<!-- Table drawing html. -->
+	<div ng-controller="tableCtrl_m1" class="site-wrap">
+        <div ng-if="data_Loading == false">
+            <img id="spinner" src="images/loading.gif" />
+        </div>
+	    <div ng-include="'table.html'"></div>
+	</div>
+	
+</div>
+</body>
+</html>

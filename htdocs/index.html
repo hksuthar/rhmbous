@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en" ng-app="slider" class="no-js">
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=qupzilla">
+        <title>Index</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="js/angular.js"></script>
+    </head>
+    <body>
+    	<div class="slideshow-container" ng-controller="SliderController">
+            <div class="brand-logo">
+				<img src="images/rhombus_logo.png">
+            </div>
+            <div class="center-system" ng-controller="tableCtrl">
+            <div ng-if="data_Loading == false">
+                <img id="spinner1" ng-src="images/loading.gif" />
+            </div>
+            	<div class="system-col-4 active_block" ng-if="data_Loading != false">
+                    <!-- Left Top Part -->
+				   	<div ng-if="left_top == 'Battery'" class="new_battery_set">
+                        <img src="images/Icon_9-01.svg">
+						<br/>
+                        <span>{{left_top_Description}}</span>
+                        <p ng-repeat="row in rowDef">
+                        <lable ng-if="row.Address == left_top_Address">{{row.dataFmtd}}<br></lable></p>
+                    </div>
+                    <div ng-if="left_bottom == 'Solar'" class="new_solar_set"> 
+                        <img src="images/Icon_10-01-12.svg">                     
+						<br/>
+                        <span>{{left_bottom_Description}}</span>
+                        <p ng-repeat="row in rowDef"><lable ng-if="row.Address == left_bottom_Address">{{row.dataFmtd}}<br></lable></p>
+                    </div>
+                </div>
+		     	
+                <div ng-if="left_top != '' && data_Loading != false" class="left-top-arrow" ng-repeat="row in rowDef">
+					<div ng-if="row.Address == left_top_Address">
+						<div ng-if="Data_left_top_DC_Current[0].data > 0.0">
+						    <img src="images/lefttop_comeway.jpg">  
+						</div>			
+						<div ng-if="Data_left_top_DC_Current[0].data == 0.0">         
+						    <img src="images/lefttop_non_arrow.jpg">
+						</div>
+						<div ng-if="Data_left_top_DC_Current[0].data < 0.0">         
+						    <img src="images/lefttop_outway.jpg">
+						</div>
+					</div>
+                </div>
+                <div ng-if="left_bottom != '' && data_Loading != false" class="left-bottom-arrow" ng-repeat="row in rowDef">
+				   	<div ng-if="row.Address == left_bottom_Address">
+						<div ng-if="Data_left_bottom_DC_Current[0].data > 0.0">
+						     <img src="images/leftbottom_outway.jpg">
+						</div>			
+						<div ng-if="Data_left_bottom_DC_Current[0].data == 0.0">         
+						    <img src="images/leftbottom_non_arrow.jpg">
+						</div>
+						<div ng-if="Data_left_bottom_DC_Current[0].data < 0.0">         
+						    <img src="images/leftbottom_comeway.jpg"> 
+						</div>
+					</div>
+                </div>
+                <div ng-if="right_top != '' && data_Loading != false" class="right-top-arrow" ng-repeat="row in rowDef">
+                	<div ng-if="row.Address == right_top_Address"> 
+						<div ng-if="Data_right_top_AC_Current[0].data > 0.0">
+						    <img src="images/leftbottom_comeway.jpg">  
+						</div>			
+						<div ng-if="Data_right_top_AC_Current[0].data == 0.0">         
+						    <img src="images/leftbottom_non_arrow.jpg">
+						</div>
+						<div ng-if="Data_right_top_AC_Current[0].data < 0.0">         
+						    <img src="images/leftbottom_outway.jpg">
+						</div>
+					</div>
+                </div>
+                <div ng-if="right_bottom != '' && data_Loading != false" class="right-bottom-arrow" ng-repeat="row in rowDef">
+                    <div ng-if="row.Address == right_bottom_Address">
+						<div ng-if="Data_right_bottom_AC_Current[0].data > 0.0">
+						    <img src="images/lefttop_outway.jpg">
+						</div>			
+						<div ng-if="Data_right_bottom_AC_Current[0].data == 0.0">         
+						   <img src="images/lefttop_non_arrow.jpg">
+						</div>
+						<div ng-if="Data_right_bottom_AC_Current[0].data < 0.0">         
+						    <img src="images/lefttop_comeway.jpg">
+						</div>
+					</div>
+                </div>
+                <div class="system-col-4" ng-if="data_Loading != false">
+                    <div class="new_pcs_set">
+                        <img src="images/rhombus_icon.png">
+                         <p>PCS</p>
+                    </div>
+                </div>
+                <div class="system-col-4 active_block" ng-if="data_Loading != false">
+                    <!-- Right Top Part -->
+				    <div ng-if="right_top == 'Grid'" class="new_grid_set new_grid_none"> 
+                        <img src="images/Icon_5-01.svg">              
+						<br/>
+                        <span>{{right_top_Description}}</span>
+                        <p ng-repeat="row in rowDef"><lable ng-if="row.Address == right_top_Address">{{row.dataFmtd}}<br></lable></p>
+                    </div>
+                    <div ng-if="right_bottom == 'Criticalload'" class="new_criticalload_set">
+                        <img src="images/Icon_7-01.svg">                        
+						<br/>
+                        <span>{{right_bottom_Description}}</span>
+                        <p ng-repeat="row in rowDef"><lable ng-if="row.Address == right_bottom_Address">{{row.dataFmtd}}<br></lable></p>
+                    </div>
+                </div>
+            </div>
+            
+            <a class="prev" href="error&warning.html">
+               <img src="images/left-arrow.svg">
+            </a>
+		    <a class="next" href="ciu.html">
+               <img src="images/right-arrow.svg">
+            </a>
+
+        </div>
+        <!--SCRIPT-->
+        <script src="js/app.js"></script>
+        <script>
+                tableTitle = 'Index';
+                jsonUrl = 'json/index.json';
+                statusScreen = false;
+        </script>
+        <script src="js/sprintf.js"></script>
+        <script src="js/elements.js"></script>
+        <script src="js/ng-modal.js"></script>
+        <script src="js/angular-idle.min.js"></script>
+        
+    </body>
+</html>

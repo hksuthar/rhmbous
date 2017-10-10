@@ -1,0 +1,57 @@
+[
+    {
+        "Address": "CIU Faults",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "",
+        "Variables": ""
+    },
+    {
+        "Address": "292",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','Crit Mod Comm Err=0|Key Faulted=1|Purge Fail Shtdwn=2|Config Invalid Shtdwn=3|Controller Mode Incorrect=4|Enclosure Overtemp=5|CCU Faulted=6|Non CCU BB Shuts=7|EPO Shutdown=8|Fuel Valve Retry Failure=9|Excesv P2 P3 Faults Shtdnw=10|K2 Relay Cntrl Failed=11|Cogen Too Hot=12|LVPS Low Fault=13|Low VBATT Fault=14|Amb Temp Senr OOR Shut=15')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU Fault",
+        "Variables": "ss_status[0]"
+    },
+    {
+        "Address": "293",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','Can Amb Tep OOR=0')",
+        "Rate": "",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU Fault",
+        "Variables": "ss_status[1]"
+    },
+    {
+        "Address": "294",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "B('|','=','Invalid Input=2')",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU Warning",
+        "Variables": "ss_status[2]"
+    },
+    {
+        "Address": "295",
+        "Default": "",
+        "EEPROM": "",
+        "Range": "L('|','=','Maint Mode=0|Master Unit=1|Slave Unit=2|Unit Start Stop=5|Cmnd Sync Zero=14|Maint Mode Aux Cmd=15')\n",
+        "Rate": "2000",
+        "Scaling": "",
+        "Security": "",
+        "Signal": "CIU State",
+        "Variables": "ss_status[3]"
+    }
+]

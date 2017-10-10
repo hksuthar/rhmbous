@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ciu">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Settings</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <script src="js/angular.min.js"></script>
+    <script src="js/ciu.js"></script>
+</head>
+
+<body ng-controller="SecondCtrl">
+
+    <div class="slideshow-container">
+        <div class="codrops-header"> 
+            <h1 id="fixedtop" style="padding-top: .6em; padding-bottom: .3em; margin: 0px; width: 100%; z-index: 10;">
+               Settings</h1>
+           </div>
+           <div class="settings-sec">
+            <button onclick="window.location.href='GenSet.html'"><div class="set-col-4">
+                <img src="images/tool.png">
+                <p>GENERAL SETTING</p>
+            </div></button>
+            <button onclick="window.location.href='ACSet.html'"><div class="set-col-4">
+                <img src="images/ac.png">
+                <p>AC SETTING</p>
+            </div></button>
+            <button onclick="window.location.href='DCSet.html'"><div class="set-col-4">
+                <img src="images/dc.png">
+                <p>DC SETTING</p>
+            </div></button>
+        </div>
+
+        <a class="prev" onclick="window.location.href='ciu.html'"><img border="0" src="images/left-arrow.svg"></a>
+
+        <div class="brand-logo">
+            <img src="images/rhombus_logo.png">
+        </div>
+    </div>
+    
+    <script src="js/ng-modal.js"></script>
+    <script src="js/angular-idle.min.js"></script>
+</body>
+</html>
+
+

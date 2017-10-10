@@ -1,0 +1,2 @@
+AddType images/svg+xml .svg .svgz
+AddEncoding gzip svgz
